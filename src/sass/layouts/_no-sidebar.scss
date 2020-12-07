@@ -1,0 +1,10 @@
+.no-sidebar {
+	.site {
+		display: grid;
+		grid-template-areas:
+			'header'
+			'main'
+			'footer';
+		grid-template-columns: auto;
+	}
+}

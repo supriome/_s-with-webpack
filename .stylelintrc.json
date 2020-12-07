@@ -2,15 +2,30 @@
     "extends": [
         "stylelint-config-wordpress/scss"
     ],
+    "plugins": ["stylelint-order"],
     "ignoreFiles": [
-        "sass/_normalize.scss"
+        "**/*.css",
+        "**/*.scss",
+        "**/*.less"
     ],
     "rules": {
         "font-family-no-missing-generic-family-keyword": null,
         "no-descending-specificity": null,
         "block-no-empty": null,
+        "block-closing-brace-newline-before": "always",
         "no-duplicate-selectors": null,
         "font-family-no-duplicate-names": null,
-        "selector-class-pattern": null
+        "selector-class-pattern": null,
+        "order/properties-alphabetical-order": null,
+        "max-line-length": 2000,
+        "comment-empty-line-before": "always",
+        "indentation": "always",
+        "rule-empty-line-before": "always",
+        "selector-list-comma-newline-after": "always",
+        "declaration-property-unit-allowed-list": {
+          "font-size": ["em", "px", "rem", "%"],
+          "/^animation/": ["s"],
+          "line-height": []
+        }
     }
 }
